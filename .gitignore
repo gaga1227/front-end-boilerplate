@@ -1,0 +1,37 @@
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+
+############
+## Mac
+############
+
+.DS_Store
+
+
+#############
+## design
+#############
+
+# Adobe source files
+# .psd
+# .psb
+# .ai
+
+
+#############
+## dev
+#############
+
+.sass-cache/*
+.tmp/
+bower_components
+node_modules
+www

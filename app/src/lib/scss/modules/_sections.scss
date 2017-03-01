@@ -1,0 +1,35 @@
+/*
+# Sections
+** section blocks **
+*/
+
+// default (transparent)
+// -------------------------------------------------------------------------------------------
+
+.section {
+	// common
+	&,
+	.padder {
+		display: block;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	// padder
+	.padder {
+		max-width: $max-content-width;
+		padding: 0 40px;
+		&.full-width {
+			max-width: none;
+			padding: 0;
+		}
+	}
+}
+
+
+// section - custom
+// -------------------------------------------------------------------------------------------

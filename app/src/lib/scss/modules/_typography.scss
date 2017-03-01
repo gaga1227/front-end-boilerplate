@@ -1,0 +1,46 @@
+/*
+# typography
+** basic type module styles **
+*/
+
+// global
+// -------------------------------------------------------------------------------------------
+
+body {
+	font-family: $font-sans-serif;
+}
+
+
+// headings
+// -------------------------------------------------------------------------------------------
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	color: $black;
+	font-family: $font-brand;
+	font-weight: 600;
+}
+
+
+// Responsive
+// -------------------------------------------------------------------------------------------
+
+@media only screen and (max-width:650px) {
+}
+
+@media only screen and (max-width:320px) {
+}
+
+
+// shortcuts
+// -------------------------------------------------------------------------------------------
+
+.font-brand { font-family: $font-brand!important; }
+
+
+
+

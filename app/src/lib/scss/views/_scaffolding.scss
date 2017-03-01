@@ -1,0 +1,25 @@
+/*
+# Layout Scaffolding
+*/
+
+// body
+html, body {
+	display: block;
+	width: auto;
+	height: auto;
+	min-height: 100%;
+	margin: 0;
+	color: $black;
+	background-color: $brand-primary;
+}
+
+// page container
+#container {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	min-width: $min-content-width;
+	overflow: hidden;
+}
+

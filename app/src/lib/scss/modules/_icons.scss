@@ -1,0 +1,41 @@
+/*
+# Icons
+** Icon style presets **
+
+* This file contains all common icon preset styles on top of the icon font library
+* We use ionicons as well as our sportsbet icons
+*/
+
+// icon font
+.icon {
+	// common
+	speak: none;
+	font-size: inherit;
+	line-height: 1;
+	font-style: normal!important;
+	font-weight: normal!important;
+	font-variant: normal!important;
+	text-transform: none!important;
+	text-align: center;
+
+	// icon char
+	&:before {
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	// Better Font Rendering
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// size presets
+	&.small {
+		font-size: 12px!important;
+	}
+	&.medium {
+		font-size: 24px!important;
+	}
+	&.large {
+		font-size: 32px!important;
+	}
+}
