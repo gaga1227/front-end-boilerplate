@@ -1,9 +1,9 @@
 {
-	"name": "front-end-boilerplate",
-	"description": "Boilerplate for front-end projects",
+	"name": "Odds Test",
+	"description": "",
 	"version": "1.0.0",
 	"author": "Johnny Xu",
-	"license": "GNU GENERAL PUBLIC LICENSE",
+	"license": "",
 	"homepage": "",
 	"repository": {
 		"type": "git",

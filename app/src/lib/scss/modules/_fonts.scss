@@ -36,9 +36,6 @@ $font-path: '../font/';
 // -------------------------------------------------------------------------------------------
 
 // brand font
-@include add-font-face(novecentowide-light, NovecentoWide, 200);
-@include add-font-face(novecentowide-book, NovecentoWide, 300);
-@include add-font-face(novecentowide-normal, NovecentoWide, 400);
-@include add-font-face(novecentowide-medium, NovecentoWide, 500);
-@include add-font-face(novecentowide-demibold, NovecentoWide, 600);
-@include add-font-face(novecentowide-bold, NovecentoWide, 700);
+@include add-font-face(poppins-regular, Poppins, 400);
+@include add-font-face(poppins-semibold, Poppins, 500);
+@include add-font-face(poppins-bold, Poppins, 600);
