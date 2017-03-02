@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="241px" height="162px" viewBox="0 0 241 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>HorseSummary</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Landscape" transform="translate(-917.000000, -223.000000)">
+            <g id="Horse-Summary" transform="translate(917.000000, 223.000000)">
+                <g id="Group-2" stroke-width="1">
+                    <rect id="Rectangle-3-Copy" fill="#FFFFFF" x="0" y="0" width="240.875636" height="161.355794" rx="3"></rect>
+                    <rect id="Rectangle-3-Copy-4" fill="#E0E0E0" x="6" y="6" width="229.125605" height="149.218412" rx="3"></rect>
+                </g>
+                <rect id="Rectangle-14" fill="#FFFFFF" x="27" y="59.1736527" width="188" height="40.742515" rx="5"></rect>
+                <rect id="Rectangle-5-Copy-2" fill="#DFDFDF" x="73" y="69.8443114" width="52" height="6.86819497" rx="3.43409749"></rect>
+                <rect id="Rectangle-5-Copy-5" fill="#DFDFDF" x="73" y="83.4251497" width="120" height="6.86819497" rx="3.43409749"></rect>
+                <ellipse id="Oval-4" fill="#93D491" cx="49.5" cy="80.0299401" rx="11.5" ry="11.1556886"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

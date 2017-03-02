@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="241px" height="162px" viewBox="0 0 241 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>MarketOdds</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="156.998607" y="28.1317365" width="37.8376859" height="14.5508982" rx="1"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="156.998607" y="59.1736527" width="37.8376859" height="14.5508982" rx="1"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="156.998607" y="90.2155689" width="37.8376859" height="14.5508982" rx="1"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Landscape" transform="translate(-395.000000, -223.000000)">
+            <g id="Market-Odds" transform="translate(395.000000, 223.000000)">
+                <g id="Group-2">
+                    <rect id="Rectangle-3-Copy" fill="#FFFFFF" x="0" y="0" width="240.875636" height="161.355794" rx="3"></rect>
+                    <rect id="Rectangle-3-Copy-4" fill="#E0E0E0" x="6" y="6" width="229.125605" height="149.218412" rx="3"></rect>
+                </g>
+                <g transform="translate(19.000000, 23.281437)">
+                    <path d="M0,5.00946098 C0,2.24281208 2.24484899,0 4.99229024,0 L197.988179,0 C200.745344,0 202.980469,2.2383539 202.980469,5.00946098 L202.980469,20.3712575 L0,20.3712575 L0,5.00946098 Z" id="Rectangle-6-Copy-5" fill="#CACACA"></path>
+                    <rect id="Rectangle-6" fill="#FFFFFF" x="0" y="20.3712575" width="202.980469" height="29.1017964"></rect>
+                    <g id="Rectangle-3-Copy-8">
+                        <use fill="#93D491" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    </g>
+                    <rect id="Rectangle-5-Copy-2" fill="#DFDFDF" x="8" y="32.011976" width="67" height="6.86819497" rx="3.43409749"></rect>
+                    <rect id="Rectangle-6" fill="#FFFFFF" x="0.009765625" y="51.4131737" width="202.980469" height="29.1017964"></rect>
+                    <g id="Rectangle-3-Copy-8">
+                        <use fill="#93D491" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    </g>
+                    <rect id="Rectangle-5-Copy-2" fill="#DFDFDF" x="8" y="63.0538922" width="54" height="6.86819497" rx="3.43409749"></rect>
+                    <rect id="Rectangle-6" fill="#FFFFFF" x="0.009765625" y="82.4550898" width="202.980469" height="29.1017964"></rect>
+                    <g id="Rectangle-3-Copy-8">
+                        <use fill="#93D491" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    </g>
+                    <rect id="Rectangle-5-Copy-2" fill="#DFDFDF" x="8" y="94.0958084" width="76" height="6.86819497" rx="3.43409749"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
