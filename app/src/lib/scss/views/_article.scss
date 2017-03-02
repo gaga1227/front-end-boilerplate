@@ -1,0 +1,19 @@
+/*
+# Article view
+*/
+
+// container
+// -------------------------------------------------------------------------------------------
+
+.article-view {
+	margin: 0 auto;
+	padding: $content-gutter 0;
+
+	>:first-child {
+		margin-top: 0;
+	}
+	>:last-child {
+		margin-bottom: 0;
+	}
+}
+

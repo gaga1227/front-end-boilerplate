@@ -22,7 +22,7 @@
 	// padder
 	.padder {
 		max-width: $max-content-width;
-		padding: 0 40px;
+		padding: 0 $side-gutter;
 		&.full-width {
 			max-width: none;
 			padding: 0;
@@ -31,5 +31,23 @@
 }
 
 
-// section - custom
+// section - header
 // -------------------------------------------------------------------------------------------
+
+#section-header {
+	height: 75px;
+	overflow: hidden;
+	color: $white;
+	background: $brand-primary;
+
+	// brand logo
+	.brand-logo {
+		float: left;
+		display: block;
+		width: 85px;
+		height: 26px;
+		margin-top: 24px;
+		background: transparent url('#{$img-path}logo.svg') top left no-repeat;
+		background-size: 100%;
+	}
+}

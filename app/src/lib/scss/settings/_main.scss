@@ -28,7 +28,9 @@ $jet         : #222222;
 $black       : #000000;
 
 // brand shades
-$brand-primary : #FFBC00;
+$brand-primary: #F53E34;
+$text-dark: #4A4A4A;
+$bg-grey: #F3F3F7;
 
 
 // Typography
@@ -36,17 +38,39 @@ $brand-primary : #FFBC00;
 
 // font family
 $font-base-sans-serif: Helvetica, Arial, sans-serif;
-$font-sans-serif: 'Helvetica Neue', 'Helvetica', #{$font-base-sans-serif};
-$font-brand: 'NovecentoWide', #{$font-base-sans-serif};
+$font-sans-serif: 'Poppins', #{$font-base-sans-serif};
+
+$heading-size-1: 22px;
+$heading-size-2: 20px;
+$heading-size-3: 18px;
+$heading-size-4: 16px;
+$heading-size-5: 15px;
+$heading-size-6: 15px;
+$text-size: 15px;
+
+$heading-size-1-mobile: 17px;
+$heading-size-2-mobile: 16px;
+$heading-size-3-mobile: 15px;
+$heading-size-4-mobile: 14px;
+$heading-size-5-mobile: 13px;
+$heading-size-6-mobile: 13px;
+$text-size-mobile: 13px;
 
 
 // Layout and scaffolding
 // -------------------------------------------------------------------------------------------
 
+// gutters
+$side-gutter: 15px;
+$content-gutter: 20px;
+
 // content width limits
 $min-content-width: 320px;
-$max-content-width: 650px;
+$max-content-width: 1020px;
 
+// media query breakpoints
+$max-mobile-width: 500px;
+$max-tablet-width: 800px;
 
 // Transition and Animations
 // -------------------------------------------------------------------------------------------
@@ -58,3 +82,9 @@ $default-perspective: 400px;
 
 // ui-view related
 $view-transition-speed: 400ms;
+
+// Assets
+// -------------------------------------------------------------------------------------------
+
+// image path
+$img-path: '../img/';
