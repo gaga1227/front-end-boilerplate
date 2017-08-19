@@ -1,0 +1,26 @@
+/*
+# Base views
+** basic styles for common views **
+*/
+
+// html
+html, body {
+	display: block;
+	width: auto;
+	height: auto;
+	min-height: 100%;
+	margin: 0;
+	color: $text-dark;
+	background-color: $bg-white;
+}
+
+// page container
+#container {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	min-width: $min-content-width;
+	overflow: hidden;
+}
+

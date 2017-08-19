@@ -1,30 +1,22 @@
 /*
 # APP UI
-** Put all styles in a namespace to prevent bleeding **
+** imports required style components **
 */
 
 // settings
 @import "settings/main";
-@import "settings/pennerseasings";
 
 // functions
 @import "utils/mixins";
 
 // UI modules
-@import "modules/fonts";
-@import "modules/icons";
-@import "modules/arrows";
 @import "modules/typography";
-@import "modules/buttons";
-@import "modules/forms";
 @import "modules/sections";
-@import "modules/effects";
-@import "modules/patterns";
-@import "modules/animations";
-@import "modules/overrides";
+@import "modules/tags";
 
 // views
-@import "views/scaffolding";
+@import "views/base";
+@import "views/products";
 
 // helpers / overrides
 @import "utils/helpers";

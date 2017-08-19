@@ -1,5 +1,5 @@
 /*
-# typography
+# Typography
 ** basic type module styles **
 */
 
@@ -8,40 +8,24 @@
 
 body {
 	font-family: $font-sans-serif;
+	font-size: $font-root-size;
+	font-weight: 400;
 }
 
 
 // headings
 // -------------------------------------------------------------------------------------------
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-	color: $black;
-	font-family: $font-brand;
+// default
+h1 {
+	font-size: 36px;
 	font-weight: 600;
+	line-height: 1.5em;
 }
 
-
-// Responsive
-// -------------------------------------------------------------------------------------------
-
-@media only screen and (max-width:650px) {
+// mobile
+@media only screen and (max-width:$screen-max-width-step3) {
+	h1 {
+		font-size: 24px;
+	}
 }
-
-@media only screen and (max-width:320px) {
-}
-
-
-// shortcuts
-// -------------------------------------------------------------------------------------------
-
-.font-brand { font-family: $font-brand!important; }
-.text-center { text-align: center; }
-
-
-
-

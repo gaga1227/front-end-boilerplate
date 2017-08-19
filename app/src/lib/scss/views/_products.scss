@@ -1,0 +1,266 @@
+/*
+# Products view
+** a responsive view displaying product items **
+*/
+
+// header
+// -------------------------------------------------------------------------------------------
+
+// vars
+$filter-max-width: 200px;
+
+// default
+.products__header {
+	@include flexbox();
+	@include align-items(center);
+	margin-bottom: $base-gutter;
+	background: $bg-light-blue;
+	
+	// heading
+	.products__heading {
+		@include flex(1, 1, auto); // flexible width
+		margin: 0 $base-gutter;
+		@include text-truncate();
+	}
+
+	// filter
+	select.products__filter {
+		@include flex(0, 0, $filter-max-width); // fixed width
+		@include box-sizing(border-box);
+		width: $filter-max-width;
+		margin-right: $base-gutter * 2;
+		padding: 3px $base-gutter;
+		color: $text-dark;
+		background: #f8f8f8;
+		font-size: 16px;
+		border-radius: 5px;
+
+		// disabled state
+		&[disabled] {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+	}
+}
+
+// mobile
+@media only screen and (max-width:$screen-max-width-step3) {
+	// stack elements vertically
+	.products__header {
+		display: block; // cancel flex box display
+		text-align: center;
+
+		.products__heading,
+		select.products__filter {
+			@include flex(0 1 auto); // reset flex item values
+			width: auto;
+			margin: $base-gutter;
+		}
+		.products__heading {
+			margin-top: 0;
+			margin-bottom: 0;
+			white-space: normal; // remove text truncation
+		}
+		select.products__filter {
+			margin-top: 0;
+		}
+	}
+}
+
+// product item
+// 1. can be used independently without a container
+// 2. can be applied to an anchor tag
+// -------------------------------------------------------------------------------------------
+
+// vars
+$product-item-max-width: 420px;
+$product-border-color: #e1e1e1;
+$product-border-width: 1px;
+$product-bg: #ffffff;
+$product-name-line-height: 1.15em;
+
+// default
+.products__item,
+a.products__item {
+	display: block;
+	position: relative;
+	width: auto;
+	max-width: $product-item-max-width;
+	margin: 0 auto;
+	padding: $base-gutter*2 0 $base-gutter*3.5 0;
+	color: $text-dark!important;
+	background: $product-bg;
+	border: $product-border-width solid $product-border-color;
+	text-align: center;
+	text-decoration: none!important;
+	overflow: hidden;
+	@include box-sizing(border-box);
+
+	.products__item__image {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		@include transform-origin(center);
+		@include transition(transform);
+	}
+
+	.products__item__info {
+		position: relative;
+		@include flexbox();
+		@include align-items(flex-end); // bottom align items
+		margin: 0 $base_gutter;
+		height: $product-name-line-height*2; // limit height to two lines max
+		font-size: 24px;
+		font-weight: bold;
+		line-height: $product-name-line-height;
+		overflow: hidden;
+	}
+
+	.products__item__info__name {
+		@include flex(1 1 auto); // flexible width
+		text-align: left;
+	}
+
+	.products__item__info__price {
+		@include flex(0 0 auto); // keep content width
+		font-size: 36px;
+		text-align: right;
+		margin-left: $base-gutter;
+		padding-bottom: $base-gutter/2; // push up to align baseline
+	}
+
+	// hover state
+	&:hover {
+		.products__item__image {
+			@include transform(scale(1.05));
+		}
+	}
+}
+
+// mobile
+@media only screen and (max-width:$screen-max-width-step3) {
+	.products__item,
+	a.products__item {
+		// smaller font size
+		.products__item__info {
+			font-size: 20px;
+		}
+		.products__item__info__price {
+			font-size: 30px;
+		}
+	}
+}
+
+
+// product list
+// -------------------------------------------------------------------------------------------
+
+// mixin
+// 1. encapsulates special rules to make item borders appear collapsed in a grid
+// 2. $col: number of columns per row, defaults to 1
+// 3. use colour to hide border to keep item widths and heights consistent in a grid
+@mixin collapseItemBorderWithColumnNumber($col: 1) {
+	// apply logic for grid only for two columns and above
+	@if ($col > 1) {
+		// calculate width based on column number
+		width: 100%/$col;
+		// show left border for the first item on each row
+		&:nth-child(#{$col}n+1) {
+			border-left-color: $product-border-color;
+		}
+		// hide top border for all items from 2nd row
+		&:nth-child(n+#{$col+1}) {
+			border-top-color: transparent;
+		}
+	}
+	// apply single column logic
+	@else {
+		width: auto;
+		float: none;
+		// always show left border
+		border-left-color: $product-border-color;
+		// hide top border from 2nd item down
+		&:nth-child(n+2) {
+			border-top-color: transparent;
+		}
+	}
+}
+
+// default
+// 1. show items as a grid by float
+// 2. hide item left border by default
+.products__list {
+	.products__item,
+	a.products__item {
+		float: left;
+		max-width: none;
+		border-left-color: transparent;
+	}
+}
+
+// above small desktop
+// 1. four items per row
+@media only screen and (min-width: #{$screen-max-width-step1+1}) {
+	.products__list {
+		.products__item,
+		a.products__item {
+			@include collapseItemBorderWithColumnNumber(4);
+		}
+	}
+}
+
+// above tablet to small desktop
+// 1. three items per row
+@media only screen and (min-width: #{$screen-max-width-step2+1}) and (max-width:$screen-max-width-step1) {
+	.products__list {
+		.products__item,
+		a.products__item {
+			@include collapseItemBorderWithColumnNumber(3);
+		}
+	}
+}
+
+// above mobile to tablet
+// 1. two items per row
+@media only screen and (min-width: #{$screen-max-width-step3+1}) and (max-width:$screen-max-width-step2) {
+	.products__list {
+		.products__item,
+		a.products__item {
+			@include collapseItemBorderWithColumnNumber(2);
+		}
+	}
+}
+
+// mobile and below
+// 1. all items in single column
+@media only screen and (max-width:$screen-max-width-step3) {
+	.products__list {
+		.products__item,
+		a.products__item {
+			@include collapseItemBorderWithColumnNumber();
+		}
+	}
+}
+
+
+// product message
+// -------------------------------------------------------------------------------------------
+
+// default
+.products__message {
+	display: block;
+	margin: 0 auto;
+	padding: $base-gutter*4 $base-gutter*2;
+	width: auto;
+	max-width: 600px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5em;
+
+	// variants
+	&.products__message--error {
+		color: $accent-red;
+	}
+}

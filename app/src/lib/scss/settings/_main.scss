@@ -1,60 +1,41 @@
 /*
 # Main Settings
-** Basic common settings **
 */
 
 // colors
 // -------------------------------------------------------------------------------------------
 
-// gray shades
-$white       : #FFFFFF;
-$ghost       : #FAFAFA;
-$snow        : #F9F9F9;
-$vapor       : #F6F6F6;
-$white-smoke : #F5F5F5;
-$silver      : #EFEFEF;
-$smoke       : #EEEEEE;
-$gainsboro   : #DDDDDD;
-$iron        : #CCCCCC;
-$base        : #AAAAAA;
-$aluminum    : #999999;
-$jumbo       : #888888;
-$monsoon     : #777777;
-$steel       : #666666;
-$charcoal    : #555555;
-$tuatara     : #444444;
-$oil         : #333333;
-$jet         : #222222;
-$black       : #000000;
+// text
+$text-dark: #333333;
+$text-white: #FFFFFF;
 
-// brand shades
-$brand-primary : #FFBC00;
+// background
+$bg-white: #FFFFFF;
+$bg-light-blue: #DEF1F4;
+
+// accents
+$accent-red: #CC3333;
+$accent-green: #009900;
 
 
 // Typography
 // -------------------------------------------------------------------------------------------
 
-// font family
-$font-base-sans-serif: Helvetica, Arial, sans-serif;
-$font-sans-serif: 'Helvetica Neue', 'Helvetica', #{$font-base-sans-serif};
-$font-brand: 'NovecentoWide', #{$font-base-sans-serif};
+$font-sans-serif: Helvetica, Arial, sans-serif;
+$font-root-size: 16px;
 
 
-// Layout and scaffolding
+// Layout
 // -------------------------------------------------------------------------------------------
+
+// gutters
+$base-gutter: 10px;
 
 // content width limits
+$max-content-width: 1320px;
 $min-content-width: 320px;
-$max-content-width: 650px;
 
-
-// Transition and Animations
-// -------------------------------------------------------------------------------------------
-
-// default values
-$default-transition-speed: 250ms;
-$default-transition-easing: ease-in-out;
-$default-perspective: 400px;
-
-// ui-view related
-$view-transition-speed: 400ms;
+// breakpoints
+$screen-max-width-step1: 1024px;
+$screen-max-width-step2: 800px;
+$screen-max-width-step3: 600px;

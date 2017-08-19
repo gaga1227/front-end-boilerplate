@@ -1,0 +1,55 @@
+/*
+# Tags
+** styles for tag component and variants **
+*/
+
+// tag item
+// 1. can be used independently without a container
+// -------------------------------------------------------------------------------------------
+
+// default
+.tag {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin: $base-gutter/2;
+	padding: 0 1.25em;
+	color: $text-white;
+	background: $text-dark;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 3.125em;
+	text-align: center;
+	@include text-truncate();
+
+	// variants
+	&.tag--sale {
+		background: $accent-red;
+	}
+	&.tag--exclusive {
+		background: $accent-green;
+	}
+}
+
+
+// tag list
+// 1. forces tag items to use container's height
+// 2. container maintains defined height even without items
+// -------------------------------------------------------------------------------------------
+
+// default
+.tags__list {
+	position: relative;
+	@include flexbox();
+	@include align-items(); // stretch tags to match container height
+	@include box-sizing(border-box);
+	height: 50px;
+	margin: 0 $base-gutter/2;
+	overflow: hidden;
+
+	.tag {
+		@include flex(0 0 auto); // keep content width
+		@include flexbox();
+		@include align-items(center); // vertical center align content
+	}
+}

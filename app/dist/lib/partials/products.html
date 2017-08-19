@@ -1,0 +1,59 @@
+<!-- PRODUCTS -->
+<div class="products"
+	ng-controller="productsController as products">
+
+	<!-- HEADER -->
+	<div class="products__header">
+
+		<!-- HEADING -->
+		<h1 class="products__heading">Women's tops</h1>
+
+		<!-- FILTER -->
+		<select class="products__filter"
+			ng-options="size as size for size in products.sizeOptions"
+			ng-model="products.selectedSizeOption"
+			ng-disabled="products.isLoading || products.isLoadingError">
+			<option value="">Filter by size</option>
+		</select>
+	</div>
+
+	<!-- LIST -->
+	<div class="products__list clearfix"
+		ng-hide="products.isLoading || products.isLoadingError">
+
+		<!-- ITEM -->
+		<a href="" class="products__item" id="product-{{::item.index}}"
+			ng-repeat="item in products.items"
+			ng-if="products.matchSelectedSize(item.size)">
+
+			<!-- IMAGE -->
+			<img class="products__item__image" with="280" height="280"
+				ng-src="lib/img/{{::item.productImage}}"
+				title="{{::item.productName}}"
+				alt="Image for {{::item.productName}}">
+
+			<!-- TAGS -->
+			<span class="tags__list">
+				<span class="tag tag--sale" ng-show="::item.isSale">Sale</span>
+				<span class="tag tag--exclusive" ng-show="::item.isExclusive">Exclusive</span>
+			</span>
+
+			<!-- INFO -->
+			<span class="products__item__info">
+				<span class="products__item__info__name" ng-bind="::item.productName"></span>
+				<span class="products__item__info__price" ng-bind="::item.price"></span>
+			</span>
+		</a>
+	</div>
+
+	<!-- ERROR STATE -->
+	<div class="products__message products__message--error"
+		ng-show="!products.isLoading && products.isLoadingError"
+		ng-bind="::products.errorMessage"></div>
+
+	<!-- LOADING STATE -->
+	<div class="products__message products__message--loading"
+		ng-show="products.isLoading"
+		ng-bind="::products.loadingMessage"></div>
+
+</div><!-- /PRODUCTS -->

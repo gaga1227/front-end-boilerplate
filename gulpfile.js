@@ -7,7 +7,7 @@ var paths = {
 // Include gulp
 var gulp = require('gulp');
 
-// Include Our Plugins
+// Include Plugins
 var sass = require('gulp-sass');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
@@ -29,36 +29,22 @@ gulp.task('sass', function () {
 		}));
 });
 
+// Concatenate, Minify JS & auto-inject into browsers
+gulp.task('appscripts', function () {
+	return gulp.src(paths.src + '/lib/js/app/**/*.js')
+		.pipe(concat('app.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(paths.src + '/lib/js'))
+		.pipe(reload({
+			stream: true
+		}));
+});
+
 // Lint Task
 gulp.task('lint', function () {
 	return gulp.src(paths.src + '/lib/js/app/**/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
-});
-
-// Concatenate, Minify JS & auto-inject into browsers
-gulp.task('appscripts', function () {
-	return gulp.src(paths.src + '/lib/js/app/**/*.js')
-		.pipe(concat('app.js'))
-		.pipe(gulp.dest(paths.src + '/lib/js'))
-		.pipe(rename('app.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest(paths.src + '/lib/js'))
-		.pipe(reload({
-			stream: true
-		}));
-});
-
-gulp.task('vendorscripts', function () {
-	return gulp.src(paths.src + '/lib/js/vendor/**/*.js')
-		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest(paths.src + '/lib/js'))
-		.pipe(rename('vendor.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest(paths.src + '/lib/js'))
-		.pipe(reload({
-			stream: true
-		}));
 });
 
 // Watch Files For Changes
@@ -86,23 +72,20 @@ gulp.task('clean', function () {
 		.pipe(clean());
 });
 
-// deploy app artifact
+// Prepare distribution artifact
 gulp.task('dist', ['clean'], function () {
 	gulp.src(paths.src + '/**/*.html').pipe(gulp.dest(paths.dist));
-	gulp.src(paths.src + '/apple-touch-icon-precomposed.png').pipe(gulp.dest(paths.dist));
-	gulp.src(paths.src + '/favicon.png').pipe(gulp.dest(paths.dist));
 	gulp.src(paths.src + '/lib/css/**/*.css').pipe(gulp.dest(paths.dist + '/lib/css'));
 	gulp.src(paths.src + '/lib/js/*.min.js').pipe(gulp.dest(paths.dist + '/lib/js'));
-	gulp.src(paths.src + '/lib/font/**/*').pipe(gulp.dest(paths.dist + '/lib/font'));
-	gulp.src(paths.src + '/lib/icon/**/*').pipe(gulp.dest(paths.dist + '/lib/icon'));
+	gulp.src(paths.src + '/lib/data/**/*').pipe(gulp.dest(paths.dist + '/lib/data'));
 	gulp.src([paths.src + '/lib/img/**/*', '!**/*.psd', '!**/*.ai']).pipe(gulp.dest(paths.dist + '/lib/img'));
 });
 
-// Develop with existing server, not using browser sync
+// Develop with existing local server, not using browser sync
 gulp.task('dev', ['sass', 'lint', 'appscripts', 'watch']);
 
 // Build Tasks
-gulp.task('build', ['sass', 'lint', 'appscripts', 'vendorscripts']);
+gulp.task('build', ['sass', 'lint', 'appscripts']);
 
 // Default Task
 gulp.task('default', ['serve']);
